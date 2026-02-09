@@ -1,0 +1,149 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'bebas neue', sans-serif;
+}
+
+body{
+  background:#000;
+  color:white;
+  overflow-x:hidden;
+}
+
+/* ===== NAVBAR ===== */
+header{
+  position:fixed;
+  top:0;
+  width:100%;
+  z-index:1000;
+  background:rgba(0,0,0,0.75);
+  backdrop-filter: blur(8px);
+}
+
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 60px;
+}
+
+nav img{
+  height:55px;
+}
+
+nav ul{
+  display:flex;
+  gap:30px;
+  list-style:none;
+}
+
+nav a{
+  text-decoration:none;
+  color:white;
+  font-weight:600;
+  letter-spacing:1px;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:#ffb300;
+}
+
+/* ===== HERO ===== */
+.hero{
+  height:100vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
+    url("images/bg.jpg") center/cover no-repeat;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:0 20px;
+}
+
+.hero h1{
+  font-size:60px;
+  font-weight:800;
+  color:#ffb300;
+  text-shadow:0 0 25px #ff7a00;
+}
+
+.hero p{
+  margin-top:20px;
+  font-size:20px;
+  opacity:0.9;
+}
+
+/* ===== BUTTON ===== */
+.btn{
+  display:inline-block;
+  margin-top:30px;
+  padding:14px 32px;
+  border-radius:40px;
+  background:linear-gradient(45deg,#ff0000,#0026ff);
+  color:rgb(255, 255, 255);
+  font-weight:bold;
+  text-decoration:none;
+  box-shadow:0 0 20px #ff0000;
+  transition:0.3s;
+}
+
+.btn:hover{
+  transform:scale(1.05);
+}
+
+/* ===== SECTIONS ===== */
+.section{
+  padding:110px 10%;
+  text-align:center;
+}
+
+.section h2{
+  font-size:40px;
+  color:#ffb300;
+  margin-bottom:50px;
+}
+
+/* ===== CARDS ===== */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
+
+.card{
+  background:rgba(255,255,255,0.06);
+  border-radius:15px;
+  padding:30px;
+  backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,0.1);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 0 25px rgba(255,140,0,0.5);
+}
+
+/* ===== GALLERY ===== */
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:15px;
+}
+
+.gallery-grid img{
+  width:100%;
+  border-radius:12px;
+}
+
+/* ===== FOOTER ===== */
+footer{
+  background:#111;
+  padding:25px;
+  text-align:center;
+  font-size:14px;
+  opacity:0.7;
+}
