@@ -90,14 +90,7 @@ prev.addEventListener("click", () => {
   index = (index - 1 + slides.length) % slides.length;
   showSlide(index);
 });
-
-// auto slide every 4s
-setInterval(() => {
-  index = (index + 1) % slides.length;
-  showSlide(index);
-}, 4000);
 </script>
-
 
 </body>
 </html>
