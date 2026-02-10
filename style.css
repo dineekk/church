@@ -158,3 +158,16 @@ footer{
   justify-content:center;
   text-decoration:none;
 }
+
+/* ===== Playlist Section ===== */
+.playlist{
+  padding:60px 0;
+  text-align:center;
+}
+
+.playlist iframe{
+  width:100%;
+  height:450px;
+  border-radius:10px;
+  margin-top:20px;
+}
