@@ -193,7 +193,7 @@ header{
   font-size:64px;
   font-weight:800;
   margin-bottom:16px;
-  text-shadow:0 4px 20px rgba(0,0,0,0.7);
+  text-shadow:0 4px 20px rgb(255, 255, 255);
   letter-spacing:-1px;
   line-height:1.2;
 }
