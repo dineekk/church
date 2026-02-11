@@ -8,56 +8,95 @@
 
 <body>
 
-<!-- ===== HEADER ===== -->
+<!-- ================= HEADER ================= -->
 <header class="header">
+  <div class="nav">
 
-  <div class="logo-area">
-    <img src="images/logo.png" class="logo">
-    <h2>ENJC</h2>
+    <div class="logo-area">
+      <img src="images/logo/logo.png" class="logo">
+      <h2>ENJC</h2>
+    </div>
+
+    <nav class="menu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="events.html">Events</a>
+      <a href="media.html">Media</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+
   </div>
-
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="events.html">Events</a>
-    <a href="media.html">Media</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="contact.html" class="active">Contact</a>
-  </nav>
-
 </header>
 
 
-<!-- ===== CONTACT SECTION ===== -->
-<section class="contact-section">
-
+<!-- ================= PAGE TITLE ================= -->
+<section class="page-hero">
   <h1>Contact Us</h1>
+  <p>We are here to pray and support you</p>
+</section>
 
-  <p>
-    📍 NO 110E, Elaya Street, Tondiarpet,<br>
-    Chennai – 600081, Tamilnadu
-  </p>
 
-  <p>
-    📞 Prayer Time Enquiries Available
-  </p>
+<!-- ================= CONTACT GRID ================= -->
+<section class="container contact-grid">
 
-  <iframe
-    src="https://maps.google.com/maps?q=tondiarpet%20chennai&t=&z=14&ie=UTF8&iwloc=&output=embed"
-    loading="lazy">
-  </iframe>
+  <!-- LEFT SIDE INFO -->
+  <div class="contact-info">
+
+    <h3>📍 Church Address</h3>
+    <p>
+      NO 110E, Elaya Street,<br>
+      Tondiarpet, Chennai – 600081,<br>
+      Tamilnadu, India
+    </p>
+
+    <h3>🕊 Service Timings</h3>
+    <p>
+      Sunday – 5:30am | 8:30am | 11:10am<br>
+      Friday – 11:00am to 1:30pm<br>
+      Saturday – 6:00pm to 7:00pm
+    </p>
+
+    <div class="contact-buttons">
+      <a href="tel:+919444345102" class="btn call">📞 Call Us</a>
+      <a href="https://wa.me/919444345102" target="_blank" class="btn join">💬 WhatsApp</a>
+    </div>
+
+  </div>
+
+
+  <!-- RIGHT SIDE FORM -->
+  <div class="contact-form">
+
+    <h3>Prayer Request / Message</h3>
+
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Email">
+      <textarea placeholder="Write your prayer request..."></textarea>
+      <button class="btn register">Send Message</button>
+    </form>
+
+  </div>
 
 </section>
 
 
-<!-- ===== FOOTER ===== -->
+<!-- ================= MAP ================= -->
+<section class="container">
+  <iframe
+    src="https://maps.google.com/maps?q=Elaya%20Street%20Tondiarpet%20Chennai%20600081&t=&z=14&ie=UTF8&iwloc=&output=embed"
+    loading="lazy"
+    class="map">
+  </iframe>
+</section>
+
+
+<!-- ================= FOOTER ================= -->
 <footer class="footer">
 
   <h3>Elim New Jerusalem Church</h3>
-
-  <p>
-    Sunday Services: 5:30am | 8:30am | 11:10am
-  </p>
+  <p>Jesus Christ – The Head of Our Church</p>
 
   <div class="socials">
     <a href="https://facebook.com/enjcmedia">Facebook</a> |
