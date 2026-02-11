@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <title>Gallery | ENJC</title>
@@ -27,32 +26,55 @@
 </header>
 
 
-<!-- ===== GALLERY ===== -->
+<!-- ===== FILTER BUTTONS ===== -->
+<div class="filters">
+  <button onclick="filterGallery('all')" class="active">All</button>
+  <button onclick="filterGallery('events')">Events</button>
+  <button onclick="filterGallery('worship')">Worship</button>
+  <button onclick="filterGallery('youth')">Youth</button>
+  <button onclick="filterGallery('video')">Videos</button>
+</div>
+
+
+<!-- ===== GALLERY GRID ===== -->
 <section class="gallery">
 
-  <img src="images/gallery/g1.jpg">
-  <img src="images/gallery/g2.jpg">
-  <img src="images/gallery/g3.jpg">
-  <img src="images/gallery/g4.jpg">
-  <img src="images/gallery/g5.jpg">
-  <img src="images/gallery/g6.jpg">
+  <!-- IMAGE -->
+  <div class="item events">
+    <img src="images/gallery/g1.jpg" loading="lazy">
+    <p>Sunday Celebration</p>
+  </div>
+
+  <div class="item worship">
+    <img src="images/gallery/g2.jpg" loading="lazy">
+    <p>Praise & Worship</p>
+  </div>
+
+  <div class="item youth">
+    <img src="images/gallery/g3.jpg" loading="lazy">
+    <p>Youth Meeting</p>
+  </div>
+
+  <!-- VIDEO -->
+  <div class="item video" data-video="XeNwZHjO2DQ">
+    <img src="https://img.youtube.com/vi/XeNwZHjO2DQ/hqdefault.jpg">
+    <p>Special Sermon</p>
+  </div>
 
 </section>
 
 
-<!-- ===== LIGHTBOX (popup) ===== -->
+<!-- ===== LIGHTBOX ===== -->
 <div class="lightbox" id="lightbox">
+
   <span class="close">&times;</span>
+
+  <button class="arrow left">&#10094;</button>
   <img id="lightbox-img">
+  <iframe id="lightbox-video" allowfullscreen></iframe>
+  <button class="arrow right">&#10095;</button>
+
 </div>
-
-
-<!-- ===== FOOTER ===== -->
-<footer class="footer">
-  <h3>Elim New Jerusalem Church</h3>
-  <p>NO 110E, Elaya Street, Tondiarpet, Chennai – 600081</p>
-  <p>Sunday Services: 5:30am | 8:30am | 11:10am</p>
-</footer>
 
 <script src="gallery.js"></script>
 
