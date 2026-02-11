@@ -317,33 +317,32 @@ footer a{
 =============================== */
 
 .slider{
-  position:relative;
-  height:60vh;
-  overflow:hidden;
+  position: relative;
+  width: 100%;
+  height: 100vh;   /* FULL SCREEN height */
+  overflow: hidden;
 }
 
 .slide{
-  position:absolute;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  opacity:0;
-  transition:opacity .6s ease;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* super important ⭐ */
+  display: none;
 }
 
 .slide.active{
-  opacity:1;
+  display: block;
 }
 
-/* arrows */
 .prev, .next{
   position:absolute;
   top:50%;
   transform:translateY(-50%);
-  background:rgba(0,0,0,.5);
+  font-size:28px;
+  background:rgba(0,0,0,0.4);
   color:white;
   border:none;
-  font-size:30px;
   padding:10px 15px;
   cursor:pointer;
 }
