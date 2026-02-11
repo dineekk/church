@@ -1,51 +1,56 @@
-<!-- ===== HEADER ===== -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Events | ENJC</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
 <header class="header">
+  <div class="nav">
+    <div class="logo-area">
+      <img src="images/logo/logo.png" class="logo">
+      <h2>ENJC</h2>
+    </div>
 
-  <div class="logo-area">
-    <img src="images/logo.png" class="logo">
-    <h2>ENJC</h2>
+    <nav class="menu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="events.html" class="active">Events</a>
+      <a href="media.html">Media</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </div>
-
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="events.html">Events</a>
-    <a href="media.html">Media</a>
-    <a href="gallery.html" class="active">Gallery</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-
 </header>
 
-<section class="container">
-  <h2>Upcoming Events</h2>
 
-  <div class="grid">
-    <div class="card">Youth Prayer Meeting</div>
-    <div class="card">Special Fasting Prayer</div>
-    <div class="card">Christmas Celebration</div>
-  </div>
+<!-- TITLE -->
+<section class="page-hero">
+  <h1>Upcoming Events</h1>
+  <p>Join us for worship & fellowship</p>
 </section>
 
-<!-- ===== FOOTER ===== -->
+
+<!-- CALENDAR VIEW -->
+<section class="calendar-box container">
+  <input type="date" id="calendar">
+</section>
+
+
+<!-- EVENTS AUTO LOAD -->
+<section class="container">
+  <div id="eventsContainer" class="events-grid"></div>
+</section>
+
+
 <footer class="footer">
-
-  <h3>Elim New Jerusalem Church</h3>
-
-  <p>
-    NO 110E, Elaya Street, Tondiarpet, Chennai – 600081
-  </p>
-
-  <p>
-    Sunday Services: 5:30am | 8:30am | 11:10am
-  </p>
-
-  <div class="socials">
-    <a href="https://facebook.com/enjcmedia">Facebook</a> |
-    <a href="https://instagram.com/elimnewjerusalemchurch">Instagram</a> |
-    <a href="https://youtube.com/@ElimNewJerusalemChurchOfficial">YouTube</a>
-  </div>
-
-  <p>© 2026 ENJC. All Rights Reserved.</p>
-
+  © 2026 Elim New Jerusalem Church
 </footer>
+
+<script src="events.js"></script>
+
+</body>
+</html>

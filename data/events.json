@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Youth Prayer Meeting",
+    "date": "2026-03-05",
+    "time": "6:00 PM",
+    "image": "images/events/e1.jpg",
+    "whatsapp": "https://wa.me/919444345102"
+  },
+  {
+    "title": "Special Fasting Prayer",
+    "date": "2026-03-10",
+    "time": "11:00 AM",
+    "image": "images/events/e2.jpg",
+    "whatsapp": "https://wa.me/919444345102"
+  },
+  {
+    "title": "Christmas Celebration",
+    "date": "2026-12-25",
+    "time": "8:30 AM",
+    "image": "images/events/e3.jpg",
+    "whatsapp": "https://wa.me/919444345102"
+  }
+]
