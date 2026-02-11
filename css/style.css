@@ -349,3 +349,46 @@ footer a{
 
 .prev{ left:15px; }
 .next{ right:15px; }
+
+/* ================= HERO TEXT OVERLAY ================= */
+
+.hero-text{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  text-align:center;
+  color:#fff;
+  z-index:5;
+}
+
+.hero-text h1{
+  font-size:48px;
+  margin-bottom:10px;
+  text-shadow:0 4px 10px rgba(0,0,0,0.6);
+}
+
+.hero-text p{
+  font-size:20px;
+  margin-bottom:20px;
+}
+
+/* button */
+.hero-btn{
+  background:#f4b400;
+  color:#000;
+  padding:10px 20px;
+  border-radius:6px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+.slider::after{
+  content:"";
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.4);
+  top:0;
+  left:0;
+}
