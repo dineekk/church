@@ -44,5 +44,31 @@
       "buttonText": "Watch Live",
       "buttonClass": "join"
     }
+  ],
+  "recentStreams": [
+    {
+      "id": 1,
+      "title": "Sunday Worship - February 9, 2026",
+      "videoId": "YOUR_VIDEO_ID_1",
+      "youtubeLink": "https://www.youtube.com/watch?v=YOUR_VIDEO_ID_1",
+      "date": "February 9, 2026",
+      "description": "Faith That Moves Mountains - Powerful message about trusting God"
+    },
+    {
+      "id": 2,
+      "title": "Friday Prayer - February 7, 2026",
+      "videoId": "YOUR_VIDEO_ID_2",
+      "youtubeLink": "https://www.youtube.com/watch?v=YOUR_VIDEO_ID_2",
+      "date": "February 7, 2026",
+      "description": "Unity in Prayer - Coming together in the spirit of worship"
+    },
+    {
+      "id": 3,
+      "title": "Sunday Worship - February 2, 2026",
+      "videoId": "YOUR_VIDEO_ID_3",
+      "youtubeLink": "https://www.youtube.com/watch?v=YOUR_VIDEO_ID_3",
+      "date": "February 2, 2026",
+      "description": "Walking in Victory - Overcoming life's challenges with faith"
+    }
   ]
 }

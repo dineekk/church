@@ -10,7 +10,7 @@
   <meta http-equiv="Expires" content="0">
   
   <title>Events | ENJC Church</title>
-  <link rel="stylesheet" href="css/style.css?v=20260212">
+  <link rel="stylesheet" href="css/style.css?v=20260213">
 </head>
 
 <body>
@@ -41,10 +41,43 @@
   </div>
 </div>
 
+<!-- Live Stream Section (Shows ONLY when live) -->
+<section id="live-stream-section" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 40px 0;">
+  <div class="container">
+    <div style="text-align: center; margin-bottom: 30px;">
+      <h2 style="color: white; font-size: 2rem; margin-bottom: 10px;">🔴 Watch Live</h2>
+      <p style="color: rgba(255,255,255,0.9);">Join us now for live worship and prayer</p>
+    </div>
+    
+    <!-- Live stream will be displayed here dynamically -->
+    <div id="live-stream-container">
+      <!-- Loading message -->
+      <div style="text-align: center; padding: 20px; color: rgba(255,255,255,0.8);">
+        Checking for live streams...
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Recent Streams Section -->
+<section style="background: #f9f9f9;">
+  <div class="container">
+    <h2>📺 Recent Streams</h2>
+    <p style="margin-bottom: 30px;">Catch up on our latest worship services and messages</p>
+    
+    <!-- Recent streams will be loaded here -->
+    <div class="events-grid" id="recent-streams-container">
+      <!-- Loading placeholder -->
+      <p>Loading recent streams...</p>
+    </div>
+  </div>
+</section>
+
 <!-- Events Section -->
 <section>
   <div class="container">
-    <h2>Join Us</h2>
+    <h2>Our Schedule</h2>
+    <p style="margin-bottom: 30px;">Regular worship services and gatherings</p>
     
     <!-- Events will be loaded dynamically from events.json -->
     <div class="events-grid" id="events-container">
@@ -106,8 +139,9 @@
   <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
 </a>
 
-<!-- Events JavaScript - MUST be at the end -->
-<script src="js/events.js?v=20260212"></script>
+<!-- JavaScript Files -->
+<script src="js/events.js?v=20260213"></script>
+<script src="js/live-stream.js?v=20260213"></script>
 
 </body>
 </html>
