@@ -4,8 +4,8 @@
       "id": 1,
       "title": "Sunday Worship Service",
       "type": "video",
-      "videoId": "ysSagRBRE1A",
-      "youtubeLink": "https://www.youtube.com/live/ysSagRBRE1A",
+      "videoId": "P7tvLwUQ_tg",
+      "youtubeLink": "https://www.youtube.com/live/P7tvLwUQ_tg",
       "schedule": "Every Sunday",
       "times": [
         "05:30am - 07:30am",
@@ -20,8 +20,8 @@
       "id": 2,
       "title": "Friday Prayer Meeting",
       "type": "video",
-      "videoId": "/p2doONT8Q2s",
-      "youtubeLink": "https://www.youtube.com/live//p2doONT8Q2s",
+      "videoId": "ysSagRBRE1A",
+      "youtubeLink": "https://www.youtube.com/live/ysSagRBRE1A",
       "schedule": "Every Friday",
       "times": [
         "11:00am - 01:30pm"
@@ -34,11 +34,11 @@
       "id": 3,
       "title": "Youth Fellowship",
       "type": "video",
-      "videoId": "UzzS7LtoLgc",
-      "youtubeLink": "https://www.youtube.com/live/UzzS7LtoLgc",
-      "schedule": "Every New Moon day",
+      "videoId": "p2doONT8Q2s",
+      "youtubeLink": "https://www.youtube.com/live/p2doONT8Q2s",
+      "schedule": "Every Saturday",
       "times": [
-        "06:00pm - 08:30pm"
+        "06:00pm - 07:00pm"
       ],
       "description": "Dynamic gatherings for young people to grow in faith and build friendships.",
       "buttonText": "Watch Live",
@@ -48,27 +48,64 @@
   "recentStreams": [
     {
       "id": 1,
-      "title": "Sunday Worship - February 8, 2026",
-      "videoId": "ysSagRBRE1A",
-      "youtubeLink": "https://www.youtube.com/watch?v=ysSagRBRE1A",
-      "date": "February 8, 2026",
-      "description": "Faith That Moves Mountains - Powerful message about trusting God"
+      "title": "Daily Devotional - Morning Prayer",
+      "videoId": "SHORTS_VIDEO_ID_1",
+      "youtubeLink": "https://www.youtube.com/watch?v=SHORTS_VIDEO_ID_1",
+      "date": "February 11, 2026",
+      "channel": "shorts",
+      "description": "Start your day with faith and encouragement"
     },
     {
       "id": 2,
-      "title": "Friday Prayer - February 6, 2026",
-      "videoId": "p2doONT8Q2s",
-      "youtubeLink": "https://www.youtube.com/watch?v=p2doONT8Q2s",
-      "date": "February 6, 2026",
-      "description": "Unity in Prayer - Coming together in the spirit of worship"
+      "title": "Sunday Worship - Faith That Moves Mountains",
+      "videoId": "MAIN_VIDEO_ID_1",
+      "youtubeLink": "https://www.youtube.com/watch?v=MAIN_VIDEO_ID_1",
+      "date": "February 9, 2026",
+      "channel": "main",
+      "description": "Powerful message about trusting God in difficult times"
     },
     {
       "id": 3,
-      "title": "Elim Family Prayer - February 11, 2026",
-      "videoId": "P7tvLwUQ_tg",
-      "youtubeLink": "https://www.youtube.com/watch?v=P7tvLwUQ_tg",
-      "date": "February 11, 2026",
-      "description": "Walking in Victory - Overcoming life's challenges with faith"
+      "title": "Friday Prayer - Unity in the Spirit",
+      "videoId": "MAIN_VIDEO_ID_2",
+      "youtubeLink": "https://www.youtube.com/watch?v=MAIN_VIDEO_ID_2",
+      "date": "February 7, 2026",
+      "channel": "main",
+      "description": "Coming together in prayer and worship"
     }
-  ]
+  ],
+  "mostWatched": [
+    {
+      "id": 1,
+      "title": "The Power of Faith",
+      "videoId": "POPULAR_VIDEO_ID_1",
+      "youtubeLink": "https://www.youtube.com/watch?v=POPULAR_VIDEO_ID_1",
+      "views": "15K views",
+      "description": "Discover how faith can transform your life"
+    },
+    {
+      "id": 2,
+      "title": "Walking in Victory",
+      "videoId": "POPULAR_VIDEO_ID_2",
+      "youtubeLink": "https://www.youtube.com/watch?v=POPULAR_VIDEO_ID_2",
+      "views": "12K views",
+      "description": "Overcoming life's challenges with God's strength"
+    },
+    {
+      "id": 3,
+      "title": "Grace and Mercy",
+      "videoId": "POPULAR_VIDEO_ID_3",
+      "youtubeLink": "https://www.youtube.com/watch?v=POPULAR_VIDEO_ID_3",
+      "views": "10K views",
+      "description": "Understanding God's unconditional love"
+    }
+  ],
+  "liveSchedule": {
+    "nextService": {
+      "title": "Sunday Worship Service",
+      "date": "February 16, 2026",
+      "time": "05:30 AM",
+      "countdown": true
+    }
+  }
 }

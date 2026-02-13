@@ -10,11 +10,12 @@
   <meta http-equiv="Expires" content="0">
   
   <title>Events | ENJC Church</title>
-  <link rel="stylesheet" href="css/style.css?v=20260213">
+  <link rel="stylesheet" href="css/style.css?v=20260214">
 </head>
 
 <body>
 
+<!-- Header -->
 <header>
   <div class="container nav">
     <div class="logo">
@@ -36,22 +37,33 @@
 <!-- Page Hero -->
 <div class="page-hero">
   <div class="container">
-    <h1>Upcoming Events</h1>
+    <h1>Live & Events</h1>
     <p>Join us for worship, fellowship, and special gatherings</p>
   </div>
 </div>
 
-<!-- Live Stream Section (Shows ONLY when live) -->
-<section id="live-stream-section" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 40px 0;">
+<!-- Next Scheduled Service -->
+<section style="background: #f0f4ff; padding: 30px 0;">
   <div class="container">
-    <div style="text-align: center; margin-bottom: 30px;">
-      <h2 style="color: white; font-size: 2rem; margin-bottom: 10px;">🔴 Watch Live</h2>
-      <p style="color: rgba(255,255,255,0.9);">Join us now for live worship and prayer</p>
+    <div id="next-service-info">
+      <!-- Next service info will be loaded here by JavaScript -->
+      <div style="text-align: center; padding: 20px;">
+        <p style="color: #999;">Loading next service...</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Live Stream Section (Shows ONLY when live) -->
+<section id="live-stream-section" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 50px 0; display: none;">
+  <div class="container">
+    <div style="text-align: center; margin-bottom: 35px;">
+      <h2 style="color: white; font-size: 2.2rem; margin-bottom: 10px;">🔴 Watch Live Now</h2>
+      <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem;">Join our live worship service</p>
     </div>
     
     <!-- Live stream will be displayed here dynamically -->
     <div id="live-stream-container">
-      <!-- Loading message -->
       <div style="text-align: center; padding: 20px; color: rgba(255,255,255,0.8);">
         Checking for live streams...
       </div>
@@ -59,38 +71,99 @@
   </div>
 </section>
 
-<!-- Recent Streams Section -->
+<!-- Recent Streams: 1 Shorts + 2 Main Channel -->
 <section style="background: #f9f9f9;">
   <div class="container">
-    <h2>📺 Recent Streams</h2>
-    <p style="margin-bottom: 30px;">Catch up on our latest worship services and messages</p>
+    <h2>📺 Recent Live Streams</h2>
+    <p style="margin-bottom: 30px;">Catch up on our latest worship services and devotionals</p>
     
-    <!-- Recent streams will be loaded here -->
     <div class="events-grid" id="recent-streams-container">
-      <!-- Loading placeholder -->
+      <!-- Recent streams will be loaded here -->
       <p>Loading recent streams...</p>
     </div>
   </div>
 </section>
 
-<!-- Events Section -->
-<section>
+<!-- Most Watched Videos (3 from Main Channel) -->
+<section style="background: white;">
   <div class="container">
-    <h2>Our Schedule</h2>
-    <p style="margin-bottom: 30px;">Regular worship services and gatherings</p>
+    <h2>🔥 Most Watched Messages</h2>
+    <p style="margin-bottom: 30px;">Popular sermons that touched hearts</p>
     
-    <!-- Events will be loaded dynamically from events.json -->
+    <div class="events-grid" id="most-watched-container">
+      <!-- Most watched videos will be loaded here -->
+      <p>Loading popular videos...</p>
+    </div>
+  </div>
+</section>
+
+<!-- Regular Events Schedule -->
+<section style="background: #f5f5f5;">
+  <div class="container">
+    <h2>📅 Our Regular Schedule</h2>
+    <p style="margin-bottom: 30px;">Join us for our weekly worship services and gatherings</p>
+    
     <div class="events-grid" id="events-container">
-      <!-- Loading placeholder -->
+      <!-- Events will be loaded from events.json -->
       <p>Loading events...</p>
     </div>
   </div>
 </section>
 
-<!-- Special Events Section -->
-<section style="background:white;">
+<!-- Testimonials Slider -->
+<section style="background: white;">
   <div class="container">
-    <h2>Special Events</h2>
+    <h2>💬 What People Are Saying</h2>
+    <p style="margin-bottom: 40px;">Hear from our community members</p>
+    
+    <div class="testimonials-slider" style="max-width: 800px; margin: 0 auto; position: relative; overflow: hidden;">
+      <div class="testimonial-track" id="testimonial-track" style="display: flex; transition: transform 0.5s ease;">
+        
+        <!-- Testimonial 1 -->
+        <div class="testimonial-slide" style="min-width: 100%; padding: 30px; box-sizing: border-box;">
+          <div style="background: #f9f9f9; padding: 30px; border-radius: 15px; text-align: center;">
+            <p style="font-size: 1.1rem; color: #555; font-style: italic; margin-bottom: 20px; line-height: 1.6;">
+              "This church has transformed my life. The worship is powerful and the messages are life-changing. I'm grateful to be part of this family!"
+            </p>
+            <p style="font-weight: bold; color: #2c3e50;">- Sarah M.</p>
+          </div>
+        </div>
+        
+        <!-- Testimonial 2 -->
+        <div class="testimonial-slide" style="min-width: 100%; padding: 30px; box-sizing: border-box;">
+          <div style="background: #f9f9f9; padding: 30px; border-radius: 15px; text-align: center;">
+            <p style="font-size: 1.1rem; color: #555; font-style: italic; margin-bottom: 20px; line-height: 1.6;">
+              "The Friday prayer meetings have become the highlight of my week. There's so much peace and power when we pray together."
+            </p>
+            <p style="font-weight: bold; color: #2c3e50;">- John D.</p>
+          </div>
+        </div>
+        
+        <!-- Testimonial 3 -->
+        <div class="testimonial-slide" style="min-width: 100%; padding: 30px; box-sizing: border-box;">
+          <div style="background: #f9f9f9; padding: 30px; border-radius: 15px; text-align: center;">
+            <p style="font-size: 1.1rem; color: #555; font-style: italic; margin-bottom: 20px; line-height: 1.6;">
+              "The youth fellowship has helped me grow in my faith. I've made amazing friends and learned so much about God's love."
+            </p>
+            <p style="font-weight: bold; color: #2c3e50;">- David K.</p>
+          </div>
+        </div>
+        
+      </div>
+      
+      <!-- Slider Navigation -->
+      <div style="text-align: center; margin-top: 25px;">
+        <button onclick="previousTestimonial()" style="background: #667eea; color: white; border: none; padding: 10px 20px; margin: 0 5px; border-radius: 5px; cursor: pointer; font-size: 1.2rem;">❮</button>
+        <button onclick="nextTestimonial()" style="background: #667eea; color: white; border: none; padding: 10px 20px; margin: 0 5px; border-radius: 5px; cursor: pointer; font-size: 1.2rem;">❯</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Special Events Section -->
+<section style="background: #f5f5f5;">
+  <div class="container">
+    <h2>⭐ Special Events</h2>
     <p>Mark your calendar for these upcoming special gatherings</p>
     
     <div class="grid" style="margin-top:40px;">
@@ -128,6 +201,7 @@
   </div>
 </section>
 
+<!-- Footer -->
 <footer>
   <div class="container">
     © 2026 Elim New Jerusalem Church. All rights reserved.
@@ -139,9 +213,36 @@
   <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
 </a>
 
+<!-- Testimonial Slider Script -->
+<script>
+let currentTestimonial = 0;
+const testimonials = document.querySelectorAll('.testimonial-slide');
+const totalTestimonials = testimonials.length;
+
+function showTestimonial(index) {
+  const track = document.getElementById('testimonial-track');
+  if (track) {
+    track.style.transform = `translateX(-${index * 100}%)`;
+  }
+}
+
+function nextTestimonial() {
+  currentTestimonial = (currentTestimonial + 1) % totalTestimonials;
+  showTestimonial(currentTestimonial);
+}
+
+function previousTestimonial() {
+  currentTestimonial = (currentTestimonial - 1 + totalTestimonials) % totalTestimonials;
+  showTestimonial(currentTestimonial);
+}
+
+// Auto-slide every 5 seconds
+setInterval(nextTestimonial, 5000);
+</script>
+
 <!-- JavaScript Files -->
-<script src="js/events.js?v=20260213"></script>
-<script src="js/live-stream.js?v=20260213"></script>
+<script src="js/events.js?v=20260214"></script>
+<script src="js/live-stream.js?v=20260214"></script>
 
 </body>
 </html>

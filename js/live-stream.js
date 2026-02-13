@@ -1,28 +1,30 @@
-// Live Stream Schedule Handler
-// Auto-switches between Main YouTube and Shorts channel based on day/time
+// Live Stream Auto-Switcher for Elim New Jerusalem Church
+// Automatically shows Main Channel (Sunday/Friday) or Shorts Channel (Daily)
 
 const LIVE_STREAMS = {
-  // Main YouTube Channel (Friday & Sunday)
+  // Main YouTube Channel - Elim New Jerusalem Church Official
   mainChannel: {
-    channelId: 'UC_YOUR_MAIN_CHANNEL_ID', // Replace with your main channel ID
-    liveUrl: 'https://www.youtube.com/@YourMainChannel/live', // Replace with your channel
-    embedUrl: 'https://www.youtube.com/embed/live_stream?channel=UC_YOUR_MAIN_CHANNEL_ID', // Replace channel ID
+    name: 'Main Channel',
+    channelUrl: 'https://www.youtube.com/@ElimNewJerusalemChurchOfficial',
+    liveUrl: 'https://www.youtube.com/@ElimNewJerusalemChurchOfficial/live',
+    embedUrl: 'https://www.youtube.com/embed/live_stream?channel=UCyour_main_channel_id', // Replace with actual channel ID
     days: [0, 5], // Sunday = 0, Friday = 5
     times: [
-      { start: '05:30', end: '07:30' },
-      { start: '08:30', end: '10:30' },
-      { start: '11:00', end: '13:30' },
-      { start: '11:30', end: '13:30' }
+      { start: '05:30', end: '07:30' },  // Sunday 5:30-7:30am
+      { start: '08:30', end: '10:30' },  // Sunday 8:30-10:30am
+      { start: '11:00', end: '13:30' },  // Friday 11am-1:30pm OR Sunday 11:30am-1:30pm
+      { start: '11:30', end: '13:30' }   // Sunday 11:30am-1:30pm
     ],
     title: 'Live Worship Service',
     description: 'Join us for live worship, prayer, and powerful messages'
   },
   
-  // YouTube Shorts Channel (Daily)
+  // YouTube Shorts Channel - ENJC Shorts
   shortsChannel: {
-    channelId: 'UC_YOUR_SHORTS_CHANNEL_ID', // Replace with your shorts channel ID
-    liveUrl: 'https://www.youtube.com/@YourShortsChannel/live', // Replace with your shorts channel
-    embedUrl: 'https://www.youtube.com/embed/live_stream?channel=UC_YOUR_SHORTS_CHANNEL_ID', // Replace channel ID
+    name: 'Shorts Channel',
+    channelUrl: 'https://www.youtube.com/@ENJCShorts',
+    liveUrl: 'https://www.youtube.com/@ENJCShorts/live',
+    embedUrl: 'https://www.youtube.com/embed/live_stream?channel=UCyour_shorts_channel_id', // Replace with actual channel ID
     days: [0, 1, 2, 3, 4, 5, 6], // Every day
     times: [
       { start: '00:00', end: '23:59' } // All day
@@ -56,7 +58,7 @@ function isLiveTime(schedule) {
 
 // Get active live stream
 function getActiveLiveStream() {
-  // Priority 1: Main channel on scheduled days/times (Sunday & Friday)
+  // Priority 1: Main channel on Sunday/Friday scheduled times
   if (isLiveTime(LIVE_STREAMS.mainChannel)) {
     return LIVE_STREAMS.mainChannel;
   }
@@ -84,10 +86,10 @@ function displayLiveStream() {
     
     container.innerHTML = `
       <div style="max-width: 900px; margin: 0 auto;">
-        <div class="live-indicator" style="background: #ff0000; color: white; padding: 12px; text-align: center; font-weight: bold; margin-bottom: 15px; border-radius: 8px; animation: pulse 2s infinite;">
+        <div class="live-indicator" style="background: #ff0000; color: white; padding: 12px 20px; text-align: center; font-weight: bold; margin-bottom: 20px; border-radius: 8px; animation: pulse 2s infinite;">
           🔴 LIVE NOW - ${activeStream.title}
         </div>
-        <div class="video-wrapper" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+        <div class="video-wrapper" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.3);">
           <iframe 
             style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
             src="${activeStream.embedUrl}?autoplay=1&mute=0" 
@@ -97,9 +99,9 @@ function displayLiveStream() {
             allowfullscreen>
           </iframe>
         </div>
-        <div style="margin-top: 20px; text-align: center;">
-          <p style="color: rgba(255,255,255,0.9); margin-bottom: 15px; font-size: 1.1rem;">${activeStream.description}</p>
-          <a href="${activeStream.liveUrl}" class="btn" style="background: white; color: #667eea; padding: 12px 30px; border-radius: 25px; text-decoration: none; display: inline-block; font-weight: bold;" target="_blank">Watch on YouTube</a>
+        <div style="margin-top: 25px; text-align: center;">
+          <p style="color: rgba(255,255,255,0.95); margin-bottom: 20px; font-size: 1.15rem; line-height: 1.6;">${activeStream.description}</p>
+          <a href="${activeStream.liveUrl}" class="btn" style="background: white; color: #667eea; padding: 14px 35px; border-radius: 30px; text-decoration: none; display: inline-block; font-weight: bold; font-size: 1.05rem; transition: transform 0.2s;" target="_blank">Watch on YouTube</a>
         </div>
       </div>
     `;
@@ -109,20 +111,29 @@ function displayLiveStream() {
   }
 }
 
-// Add CSS animation for pulsing effect
+// Add CSS animations
 const style = document.createElement('style');
 style.textContent = `
   @keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.7; }
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.8; transform: scale(1.02); }
+  }
+  
+  .btn:hover {
+    transform: scale(1.05);
   }
 `;
 document.head.appendChild(style);
 
-// Initialize and update every minute
+// Initialize
 document.addEventListener('DOMContentLoaded', () => {
   displayLiveStream();
   
-  // Update every minute to check schedule
-  setInterval(displayLiveStream, 60000); // Check every 60 seconds
+  // Update every minute
+  setInterval(displayLiveStream, 60000);
+  
+  // Debug log
+  console.log('🔴 Live stream checker initialized');
+  console.log('⏰ Current time:', new Date().toLocaleTimeString());
+  console.log('📅 Current day:', ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][new Date().getDay()]);
 });
