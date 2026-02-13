@@ -182,7 +182,7 @@ function calculateNextService() {
   container.innerHTML = `
     <div style="text-align: center; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
       <h3 style="color: #667eea; margin-bottom: 10px;">📅 Next Live Service</h3>
-      <p style="font-size: 1.3rem; font-weight: bold; color: #ffffff; margin-bottom: 5px;">${nextService.title}</p>
+      <p style="font-size: 1.3rem; font-weight: bold; color: #2c3e50; margin-bottom: 5px;">${nextService.title}</p>
       <p style="font-size: 1.1rem; color: #666;">${nextService.day} at ${nextService.time}</p>
     </div>
   `;
