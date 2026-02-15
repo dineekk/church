@@ -49,27 +49,27 @@
     {
       "id": 1,
       "title": "Daily Devotional - Morning Prayer",
-      "videoId": "SHORTS_VIDEO_ID_1",
-      "youtubeLink": "https://www.youtube.com/watch?v=SHORTS_VIDEO_ID_1",
-      "date": "February 11, 2026",
+      "videoId": "6nyqxCh-5gI",
+      "youtubeLink": "https://www.youtube.com/watch?v=6nyqxCh-5gI",
+      "date": "February 13, 2026",
       "channel": "shorts",
       "description": "Start your day with faith and encouragement"
     },
     {
       "id": 2,
       "title": "Sunday Worship - Faith That Moves Mountains",
-      "videoId": "MAIN_VIDEO_ID_1",
-      "youtubeLink": "https://www.youtube.com/watch?v=MAIN_VIDEO_ID_1",
-      "date": "February 9, 2026",
+      "videoId": "ysSagRBRE1A",
+      "youtubeLink": "https://www.youtube.com/watch?v=ysSagRBRE1A",
+      "date": "February 8, 2026",
       "channel": "main",
       "description": "Powerful message about trusting God in difficult times"
     },
     {
       "id": 3,
       "title": "Friday Prayer - Unity in the Spirit",
-      "videoId": "MAIN_VIDEO_ID_2",
-      "youtubeLink": "https://www.youtube.com/watch?v=MAIN_VIDEO_ID_2",
-      "date": "February 7, 2026",
+      "videoId": "H1ot4mB-Z8U",
+      "youtubeLink": "https://www.youtube.com/watch?v=H1ot4mB-Z8U",
+      "date": "February 13, 2026",
       "channel": "main",
       "description": "Coming together in prayer and worship"
     }
@@ -78,25 +78,25 @@
     {
       "id": 1,
       "title": "The Power of Faith",
-      "videoId": "POPULAR_VIDEO_ID_1",
-      "youtubeLink": "https://www.youtube.com/watch?v=POPULAR_VIDEO_ID_1",
-      "views": "15K views",
+      "videoId": "5LJt7R7G0xk",
+      "youtubeLink": "https://www.youtube.com/watch?v=5LJt7R7G0xk",
+      "views": "21K views",
       "description": "Discover how faith can transform your life"
     },
     {
       "id": 2,
       "title": "Walking in Victory",
-      "videoId": "POPULAR_VIDEO_ID_2",
-      "youtubeLink": "https://www.youtube.com/watch?v=POPULAR_VIDEO_ID_2",
-      "views": "12K views",
+      "videoId": "5AxMYxuA2Do",
+      "youtubeLink": "https://www.youtube.com/watch?v=5AxMYxuA2Do",
+      "views": "16K views",
       "description": "Overcoming life's challenges with God's strength"
     },
     {
       "id": 3,
       "title": "Grace and Mercy",
-      "videoId": "POPULAR_VIDEO_ID_3",
-      "youtubeLink": "https://www.youtube.com/watch?v=POPULAR_VIDEO_ID_3",
-      "views": "10K views",
+      "videoId": "XeNwZHjO2DQ",
+      "youtubeLink": "https://www.youtube.com/watch?v=XeNwZHjO2DQ",
+      "views": "15K views",
       "description": "Understanding God's unconditional love"
     }
   ],
