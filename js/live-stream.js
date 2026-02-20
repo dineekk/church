@@ -185,7 +185,7 @@ function displayLiveStream() {
               </div>
               
               <!-- Text -->
-              <h3 style="font-size: 2rem; margin-bottom: 10px; text-shadow: 0 3px 8px rgba(0,0,0,0.8); font-weight: bold;">🔴 LIVE NOW</h3>
+              <h3 style="font-size: 2rem; margin-bottom: 10px; text-shadow: 0 3px 8px rgb(255, 255, 255); font-weight: bold;">🔴 LIVE NOW</h3>
               <p style="font-size: 1.3rem; text-shadow: 0 2px 6px rgba(0,0,0,0.8); margin-bottom: 5px;">Click to Join the Service</p>
               <p style="font-size: 1rem; opacity: 0.9; text-shadow: 0 2px 4px rgba(0,0,0,0.8);">Opens in YouTube</p>
             </div>
