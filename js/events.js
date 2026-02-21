@@ -50,8 +50,9 @@ function calculateNextService() {
     // Friday
     { day: 5, time: 660, endTime: 840, name: 'Friday Prayer Meeting', timeStr: '11:00 AM', image: 'friday-prayer.jpg' },
     // Daily night prayer
-    { day: 'daily', time: 1350, endTime: 1380, name: 'Daily Night Prayer', timeStr: '10:30 PM', image: 'images/live/night-prayer.jpg' },
-  
+    { day: 'daily', time: 1350, endTime: 1380, name: 'Daily Night Prayer', timeStr: '10:30 PM', image: 'night-prayer.jpg' },
+  ];
+
   // Find next service
   for (let i = 0; i < 7; i++) {
     const checkDay = (currentDay + i) % 7;
@@ -60,15 +61,12 @@ function calculateNextService() {
     for (const service of services) {
       if (service.day === 'daily' || service.day === checkDay) {
         if (i === 0 && checkTime >= service.time && checkTime < service.endTime) {
-          // Currently in this service - show next one
           continue;
         }
         if (i === 0 && checkTime >= service.time) {
-          // Already passed today
           continue;
         }
         
-        // Found next service
         const serviceDate = new Date(now);
         serviceDate.setDate(serviceDate.getDate() + i);
         serviceDate.setHours(Math.floor(service.time / 60));
