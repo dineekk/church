@@ -112,7 +112,12 @@ function updateCountdown() {
       
       <!-- Service Image -->
       <div style="position: relative; border-radius: 12px; overflow: hidden; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
-        <img src="images/live/${nextServiceData.image}" alt="${nextServiceData.name}" style="width: 100%; height: auto; display: block;">
+        <img 
+          src="images/live/${nextServiceData.image}" 
+          alt="${nextServiceData.name}" 
+          style="width: 100%; height: auto; display: block;"
+          onerror="this.onerror=null; this.src='images/live/common.jpg'; console.error('Image not found: ${nextServiceData.image}');"
+        >
         <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.4)); display: flex; align-items: center; justify-content: center;">
           <div style="text-align: center; color: white;">
             <h3 style="font-size: 2.5rem; margin-bottom: 10px; text-shadow: 0 3px 10px rgba(0,0,0,0.8); font-weight: bold;">⏰ NEXT LIVE SERVICE</h3>
