@@ -156,30 +156,138 @@ function updateCountdown() {
     String(seconds).padStart(2, '0');
 }
 
-// ==================== VIDEO + OTHER SECTIONS ====================
-// (Your existing functions can remain same below)
+// ==================== VIDEO SECTIONS ====================
 
 function createVideoCard(video, buttonText = 'Watch Now', showViews = false) {
+
   const card = document.createElement('div');
   card.className = 'event-card';
 
   card.innerHTML = `
-    <div class="video-wrapper" style="position:relative;padding-bottom:56.25%;height:0;">
+    <div class="video-wrapper" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
       <iframe 
-        style="position:absolute;top:0;left:0;width:100%;height:100%;"
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
         src="https://www.youtube.com/embed/${video.videoId}"
+        title="${video.title}"
+        frameborder="0"
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen>
       </iframe>
     </div>
+
     <div class="event-content">
       <h3>${video.title}</h3>
-      ${video.date ? `<p>📅 ${video.date}</p>` : ''}
-      ${video.verse ? `<p>📖 ${video.verse}</p>` : ''}
-      ${showViews && video.views ? `<p>👁️ ${video.views}</p>` : ''}
+
+      ${video.date ? `
+        <p style="color: #999; font-size: 14px; margin-bottom: 10px;">
+          📅 ${video.date}
+        </p>` : ''}
+
+      ${video.verse ? `
+        <p style="color: #667eea; font-size: 14px; margin-bottom: 10px; font-weight: bold;">
+          📖 ${video.verse}
+        </p>` : ''}
+
+      ${showViews && video.views ? `
+        <p style="color: #666; font-size: 14px; margin-bottom: 10px;">
+          👁️ ${video.views}
+        </p>` : ''}
+
       <p>${video.description}</p>
-      <a href="${video.youtubeLink}" target="_blank">${buttonText}</a>
+
+      <a href="${video.youtubeLink}" class="btn call" target="_blank">
+        ${buttonText}
+      </a>
     </div>
   `;
 
   return card;
+}
+
+
+// ==================== LOAD FUNCTIONS ====================
+
+function loadRecentStreams(streams) {
+  const container = document.getElementById('recent-streams-container');
+  if (!container || !streams) return;
+
+  container.innerHTML = '';
+  streams.forEach(stream => {
+    container.appendChild(createVideoCard(stream, 'Watch Replay'));
+  });
+}
+
+function loadMostWatched(videos) {
+  const container = document.getElementById('most-watched-container');
+  if (!container || !videos) return;
+
+  container.innerHTML = '';
+  videos.forEach(video => {
+    container.appendChild(createVideoCard(video, 'Watch Now', true));
+  });
+}
+
+function loadVerseReels(reels) {
+  const container = document.getElementById('verse-reels-container');
+  if (!container || !reels) return;
+
+  container.innerHTML = '';
+  reels.forEach(reel => {
+    container.appendChild(createVideoCard(reel, 'Watch Reel'));
+  });
+}
+
+
+// ==================== SPECIAL EVENTS ====================
+
+function loadSpecialEvents(events) {
+  const container = document.getElementById('special-events-container');
+  if (!container || !events) return;
+
+  container.innerHTML = '';
+
+  events.forEach(event => {
+    const card = document.createElement('div');
+    card.className = 'card';
+
+    card.innerHTML = `
+      <h3>${event.icon} ${event.title}</h3>
+      <p>
+        <strong>${event.schedule}</strong>
+        ${event.time ? `<br>${event.time}` : ''}
+      </p>
+      <p>${event.description}</p>
+    `;
+
+    container.appendChild(card);
+  });
+}
+
+
+// ==================== TESTIMONIALS ====================
+
+function loadTestimonials(testimonials) {
+  const track = document.getElementById('testimonial-track');
+  if (!track || !testimonials) return;
+
+  track.innerHTML = '';
+
+  testimonials.forEach(testimonial => {
+    const slide = document.createElement('div');
+    slide.className = 'testimonial-slide';
+    slide.style.cssText = 'min-width: 100%; padding: 30px; box-sizing: border-box;';
+
+    slide.innerHTML = `
+      <div style="background: white; padding: 30px; border-radius: 15px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+        <p style="font-size: 1.1rem; color: #555; font-style: italic; margin-bottom: 20px; line-height: 1.6;">
+          "${testimonial.text}"
+        </p>
+        <p style="font-weight: bold; color: #2c3e50;">
+          - ${testimonial.author}
+        </p>
+      </div>
+    `;
+
+    track.appendChild(slide);
+  });
 }
